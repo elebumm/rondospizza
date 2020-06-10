@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./assets/style/hamburgers.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Rondos Pizza</title>
+</head>
+
+<body>
+    <header class="header-menu header-small">
+        <div class="special-offers">
+            <p>Monday Special: <span>Dine IN</span>: Manicotti Pasta - $14, <span>Take out</span>: Large 6 item Pizza -
+                $23
+            </p>
+            <img class="close-cross" src="./assets/images/cross.png" />
+        </div>
+        <div class="navigation-wrapper">
+            <div class="navigration-row container">
+                <a href="index.html">
+                    <div class="logo-black"></div>
+                </a>
+                <nav class="navigation">
+                    <a href="menu.html">Menu</a>
+                    <a href="special.html">Item</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="navigation-mobile">
+                <div class="navigation-mobile-btn">
+                    <a href="menu.html">Menu</a>
+                </div>
+                <div class="navigation-mobile-btn">
+                    <a href="special.html">Item</a>
+                </div>
+                <div class="navigation-mobile-btn">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-bg header-contact">
+                <div class="header-bg-text">
+                    <h1>Contact</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="contact">
+        <div class="container">
+            <div class="menu-wrapper">
+                <div class="menu-select-space">
+                    <div class="menu-select contact-select">
+                        <div class="contact-select-button active"><img src="assets/images/cross-dark.png"><span>519.869.4288</span></div>
+                        <div class="contact-select-button"><span>2684 Lakeshore Road, Brights Grove, Ontario</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-main">
+                    <h2>Have a Question? Comment? Let our team know!</h2>
+                    <p>Reaching out about a private event or sharing your experience at our restaurant? Whatever the
+                        case may be, fill out the form below and we’ll get back to you as soon as we can!</p>
+                        <h3 class="form-received">Form Received. We’ll get back to you as soon as we can!</h3>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="contact-form-row">
+                                <div class="contact-form-input-label">
+                                    <label class="required">Name</label>
+                                    <input class="validation" name="first-name" placeholder="First" />
+                                </div>
+                                <div class="contact-form-input-label">
+                                    <input placeholder="Last" name="last-name" />
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="contact-form-input-label">
+                                    <label class="required">Phone Number</label>
+                                    <input class="validation" name="phone-number" />
+                                </div>
+                                <div class="contact-form-input-label">
+                                    <label class="required">Email</label>
+                                    <input class="validation" name="email" />
+                                </div>
+                            </div>
+                            <div class="contact-form-select">
+                                <label class="required">Reason for contact</label>
+                                <select>
+                                    <option>Private Event</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                            <div class="contact-form-text-area">
+                                <label class="required">Comments</label>
+                                <textarea class="validation" name="comments"></textarea>
+                            </div>
+                            <div class="form-submit">
+                                <p class="validation-error-message required-before">Your missing required fields. Please fill in
+                                    field and try again</p>
+                                    <div class="btn" type="submit" id="submit">
+                                        <svg class="liquid-button"
+                                            data-text="Submit"
+                                            data-force-factor="0.1"
+                                            data-layer-1-viscosity="0.6"
+                                            data-layer-2-viscosity="0.5"
+                                            data-layer-1-mouse-force="4000"
+                                            data-layer-2-mouse-force="5000"
+                                            data-layer-1-force-limit="1"
+                                            data-layer-2-force-limit="2"></svg>
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-hours">
+                    <h2>Hours of Operation</h2>
+                    <ul>
+                        <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
+                        <li>Wednesday to Saturday: 11 a.m. - 10 p.m.</li>
+                    </ul>
+                </div>
+                <div class="footer-call-us-mobile">
+                    <h3>Call Us</h3>
+                    <ul>
+                        <li>519.869.4288</li>
+                    </ul>
+                </div>
+
+                <div class="footer-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-call-us">
+                    <h3>Call Us</h3>
+                    <ul>
+                        <li>519.869.4288</li>
+                    </ul>
+                </div>
+                <div class="footer-find-us">
+                    <div class="footer-find-us-box">
+                        <div class="footer-find-us-wrapper">
+                            <h3>Find Us</h3>
+                            <ul>
+                                <li>2684 Lakeshore Rd, Brights Grove, Ontario</li>
+                            </ul>
+                        </div>
+                        <div class="footer-icons">
+                            <a class="insta" href="#"><img src="./assets/images/Instagram.png" /></a>
+                            <a class="insta" href="#"><img src="./assets/images/Facebook.png" /></a>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>Powered by <a href="#" class="underline">tmrrw inc.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../rondos-pizza/assets/scripts/jquery-3.5.1.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+
+</html>
