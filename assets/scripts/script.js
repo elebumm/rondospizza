@@ -10,31 +10,13 @@ $(document).ready(function () {
     autoplayHoverPause: false,
     autoplaySpeed: 4000,
     autoWidth: true,
-    //   responsive:{
-    //     834:{
-    //       autoplayTimeout: 8000,
-    //       autoplaySpeed: 8000,
-    //     },
-    // }
   });
 
-  $(".pizza-item").hover(function() {
+  $(".pizza-item").hover(function () {
     $('.pizza-description').addClass('animate__animated animate__faster animate__fadeInUp');
-  }, function() {
+  }, function () {
     $('.pizza-description').removeClass('animate__animated animate__faster animate__fadeInUp');
   });
-
-
-  //   $('.owl-carousel').mouseover(function(){
-
-  //     // $('.owl-stage').trigger('click');
-  //     // owl.trigger('play.owl.autoplay',[0,0]);
-  //     owl.trigger('play.owl.autoplay',[5000]);
-  // })
-
-  // $('.owl-carousel').mouseleave(function(){
-  //   owl.trigger('play.owl.autoplay',[2000]);
-  // })
 
 });
 // Hamburger
@@ -61,6 +43,39 @@ $('#submit').click(function () {
   });
 });
 
+
+// menu-anchor
+
+var topRange = 200,  // measure from the top of the viewport to X pixels down
+  edgeMargin = 0,   // margin above the top or margin from the end of the page
+  animationTime = 1200, // time in milliseconds
+  contentTop = [];
+
+$(document).ready(function () {
+  // Set up content an array of locations
+  $('.menu-select').find('a').each(function () {
+    contentTop.push($($(this).attr('href')).offset().top);
+  })
+
+  $('.menu-select').find('a').click(function () {
+    $('.menu-select a').removeClass('current');
+    $(this).addClass('current');
+
+  })
+  // adjust side menu
+  $(window).scroll(function () {
+    var winTop = $(window).scrollTop(),
+      bodyHt = $(document).height(),
+      vpHt = $(window).height() + edgeMargin;  // viewport height + margin
+    $.each(contentTop, function (i, loc) {
+      if ((loc > winTop - edgeMargin && (loc < winTop + topRange || (winTop + vpHt) >= bodyHt))) {
+        $('.menu-select a').removeClass('current').eq(i).addClass('current');
+      }
+    })
+  })
+
+});
+
 mapboxgl.accessToken = 'pk.eyJ1Ijoib3dlbmxhbWIiLCJhIjoiY2lleWljcnF4MDBiOXQ0bHR0anRvamtucSJ9.t3YnHHqvQZ8Y0MTCNy0NNw';
 var map = new mapboxgl.Map({
   container: 'map',
@@ -82,12 +97,12 @@ const LiquidButton = class LiquidButton {
     this.constructor.id++;
     this.xmlns = 'http://www.w3.org/2000/svg';
     this.tension = options.tension * 1 || 0.4;
-    this.width   = options.width   * 1 || 110;
-    this.height  = options.height  * 1 ||  110;
-    this.margin  = options.margin  ||  26;
+    this.width = options.width * 1 || 110;
+    this.height = options.height * 1 || 110;
+    this.margin = options.margin || 26;
     this.hoverFactor = options.hoverFactor || -0.1;
-    this.gap     = options.gap     ||   5;
-    this.debug   = options.debug   || false;
+    this.gap = options.gap || 5;
+    this.debug = options.debug || false;
     this.forceFactor = options.forceFactor || 0.2;
     this.color1 = options.color1 || '#36DFE7';
     this.color2 = options.color2 || '#8F17E1';
@@ -158,7 +173,7 @@ const LiquidButton = class LiquidButton {
         const x = touch.pageX - rect.left;
         const y = touch.pageY - rect.top;
         if (x > 0 && y > 0 && x < this.svgWidth && y < this.svgHeight) {
-          this.touches.push({x, y, force: touch.force || 1});
+          this.touches.push({ x, y, force: touch.force || 1 });
         }
       }
       e.preventDefault();
@@ -176,7 +191,7 @@ const LiquidButton = class LiquidButton {
       window.requestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
       window.mozRequestAnimationFrame ||
-      function(callback){ setTimeout(callback, 10)}
+      function (callback) { setTimeout(callback, 10) }
     ).bind(window));
   }
 
@@ -220,7 +235,7 @@ const LiquidButton = class LiquidButton {
         point.y += point.vy;
       }
       for (let pointIndex = 0; pointIndex < points.length; pointIndex++) {
-        const prev = points[(pointIndex + points.length - 1) % points.length]; 
+        const prev = points[(pointIndex + points.length - 1) % points.length];
         const point = points[pointIndex];
         const next = points[(pointIndex + points.length + 1) % points.length];
         const dPrev = this.distance(point, prev);
