@@ -1,182 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' /> 
-    <link rel="stylesheet" href="./assets/style/hamburgers.css">
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="slick-1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/hamburgers.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
     <title>Rondos Pizza</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header-menu header-small">
-        <div class="special-offers">
-            <p>Monday Special: <span>Dine IN</span>: Manicotti Pasta - $14, <span>Take out</span>: Large 6 item Pizza -
-                $23
-            </p>
-            <img class="close-cross" src="./assets/images/cross.png" />
+      <div class="special-offers">
+        <p>
+          Monday Special: <span>Dine IN</span>: Manicotti Pasta - $14,
+          <span>Take out</span>: Large 6 item Pizza - $23
+        </p>
+        <img class="close-cross" src="./assets/images/cross.png" />
+      </div>
+      <div class="navigation-wrapper">
+        <div class="navigration-row container">
+          <a href="index.html">
+            <div class="logo-black"></div>
+          </a>
+          <nav class="navigation">
+            <a href="menu.html">Menu</a>
+            <a href="special.html">Item</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
-        <div class="navigation-wrapper">
-            <div class="navigration-row container">
-                <a href="index.html">
-                    <div class="logo-black"></div>
-                </a>
-                <nav class="navigation">
-                    <a href="menu.html">Menu</a>
-                    <a href="special.html">Item</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-            <div class="navigation-mobile">
-                <div class="navigation-mobile-btn">
-                    <a href="menu.html">Menu</a>
-                </div>
-                <div class="navigation-mobile-btn">
-                    <a href="special.html">Item</a>
-                </div>
-                <div class="navigation-mobile-btn">
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
+        <div class="navigation-mobile">
+          <div class="navigation-mobile-btn">
+            <a href="menu.html">Menu</a>
+          </div>
+          <div class="navigation-mobile-btn">
+            <a href="special.html">Item</a>
+          </div>
+          <div class="navigation-mobile-btn">
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
-        <div class="container">
-            <div class="header-bg header-special">
-                <div class="header-bg-text">
-                    <h1>Special</h1>
-                </div>
-            </div>
+      </div>
+      <div class="container">
+        <div class="header-bg header-special">
+          <div class="header-bg-text">
+            <h1>Special</h1>
+          </div>
         </div>
+      </div>
     </header>
     <section class="special">
-        <div class="container">
-            <div class="menu-wrapper">
-                <div class="menu-select-space">
-                    <div class="menu-select">
-                        <a href="#dine-in" class="menu-select-button">Dine In</a>
-                        <a href="#take-out" class="menu-select-button">Take Out</a>
-                    </div>
-                </div>
-                <div class="menu-list">
-                    <div class="go-to">
-                        <span>Go To</span>
-                    </div>
-                    <div class="menu-list-category" id="dine-in">
-                        <h2>Dine-in Specials</h2>
-                        <div class="menu-list-item">
-                            <h3>Monday</h3>
-                            <p>Manicotti served with side of garlic bread and small tossed salad<span class="bold">$15</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Tuesday</h3>
-                            <p>Spaghetti and meatballs served with side of garlic bread and smalled tossed salad <span class="bold">$14</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Wednesday</h3>
-                            <p>Large thin crust artisan pizza <span class="bold">$25</span> | 1/2 price bottle of wine</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Thursday</h3>
-                            <p>Fettucini alfredo with side of garlic bread and small tossed salad <span class="bold">$14</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Friday</h3>
-                            <p>Large 4 item pizza <span class="bold">$23</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Friday</h3>
-                            <p>Large 4 item pizza <span class="bold">$23</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Saturday</h3>
-                            <p>Large gourmet pizza <span class="bold">$30</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Sunday</h3>
-                            <p>Large 3 item pizza <span class="bold">$23</span> | Wings<span class="bold"> $12</span></p>
-                        </div>
-                    </div>
-                    <div class="menu-list-category" id="take-out">
-                        <h2>Take Out Specials</h2>
-                        <div class="menu-list-item">
-                            <h3>Daily</h3>
-                            <p>Add a second large, 1 item pizza to any special <span class="bold">$16</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Monday - Wednesday</h3>
-                            <p>Large 6 item pizza <span class="bold">$23</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Thursday and Sunday</h3>
-                            <p>Large 3 item pizza <span class="bold">$21</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Saturday</h3>
-                            <p>Large Gourmet Pizza <span class="bold">$30</span></p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="menu-wrapper">
+          <div class="menu-select-space">
+            <div class="menu-select">
+              <a href="#dine-in" class="menu-select-button">Dine In</a>
+              <a href="#take-out" class="menu-select-button">Take Out</a>
             </div>
+          </div>
+          <div class="menu-list">
+            <div class="go-to">
+              <span>Go To</span>
+            </div>
+            <div class="menu-list-category" id="dine-in">
+              <h2>Dine-in Specials</h2>
+              <div class="menu-list-item">
+                <h3>Monday</h3>
+                <p>
+                  Manicotti served with side of garlic bread and small tossed
+                  salad<span class="bold">$15</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Tuesday</h3>
+                <p>
+                  Spaghetti and meatballs served with side of garlic bread and
+                  smalled tossed salad <span class="bold">$14</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Wednesday</h3>
+                <p>
+                  Large thin crust artisan pizza <span class="bold">$25</span> |
+                  1/2 price bottle of wine
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Thursday</h3>
+                <p>
+                  Fettucini alfredo with side of garlic bread and small tossed
+                  salad <span class="bold">$14</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Friday</h3>
+                <p>Large 4 item pizza <span class="bold">$23</span></p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Friday</h3>
+                <p>Large 4 item pizza <span class="bold">$23</span></p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Saturday</h3>
+                <p>Large gourmet pizza <span class="bold">$30</span></p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Sunday</h3>
+                <p>
+                  Large 3 item pizza <span class="bold">$23</span> | Wings<span
+                    class="bold"
+                  >
+                    $12</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="menu-list-category" id="take-out">
+              <h2>Take Out Specials</h2>
+              <div class="menu-list-item">
+                <h3>Daily</h3>
+                <p>
+                  Add a second large, 1 item pizza to any special
+                  <span class="bold">$16</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Monday - Wednesday</h3>
+                <p>Large 6 item pizza <span class="bold">$23</span></p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Thursday and Sunday</h3>
+                <p>Large 3 item pizza <span class="bold">$21</span></p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Saturday</h3>
+                <p>Large Gourmet Pizza <span class="bold">$30</span></p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="container">
-            <div class="footer-row">
-                <div class="footer-hours">
-                    <h2>Hours of Operation</h2>
-                    <ul>
-                        <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
-                        <li>Wednesday to Saturday: 11 a.m. - 10 p.m.</li>
-                    </ul>
-                </div>
-                <div class="footer-call-us-mobile">
-                    <h3>Call Us</h3>
-                    <ul>
-                        <li>519.869.4288</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-map">
-                    <div id="map"></div>
-                </div>
-            </div>
-            <div class="footer-row">
-                <div class="footer-call-us">
-                    <h3>Call Us</h3>
-                    <ul>
-                        <li>519.869.4288</li>
-                    </ul>
-                </div>
-                <div class="footer-find-us">
-                    <div class="footer-find-us-box">
-                    <div class="footer-find-us-wrapper">
-                        <h3>Find Us</h3>
-                        <ul>
-                            <li>2684 Lakeshore Rd, Brights Grove, Ontario</li>
-                        </ul>
-                    </div>
-                    <div class="footer-icons">
-                        <a class="insta" href="#"><img src="./assets/images/Instagram.png" /></a>
-                        <a class="insta" href="#"><img src="./assets/images/Facebook.png" /></a>
-                    </div>
-                </div>
-                    <div class="copyright">
-                        <p>Powered by <a href="#" class="underline">tmrrw inc.</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="../rondos-pizza/assets/scripts/jquery-3.5.1.min.js"></script>
-    <script src="./assets/scripts/script.js"></script>
-</body>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-hours">
+            <h2>Hours of Operation</h2>
+            <ul>
+              <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
+              <li>Wednesday to Saturday: 11 a.m. - 10 p.m.</li>
+            </ul>
+          </div>
+          <div class="footer-call-us-mobile">
+            <h3>Call Us</h3>
+            <ul>
+              <li>519.869.4288</li>
+            </ul>
+          </div>
 
+          <div class="footer-map">
+            <div id="map"></div>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-call-us">
+            <h3>Call Us</h3>
+            <ul>
+              <li>519.869.4288</li>
+            </ul>
+          </div>
+          <div class="footer-find-us">
+            <div class="footer-find-us-box">
+              <div class="footer-find-us-wrapper">
+                <h3>Find Us</h3>
+                <ul>
+                  <li>2684 Lakeshore Rd, Brights Grove, Ontario</li>
+                </ul>
+              </div>
+              <div class="footer-icons">
+                <a class="insta" href="#"
+                  ><img src="./assets/images/Instagram.png"
+                /></a>
+                <a class="insta" href="#"
+                  ><img src="./assets/images/Facebook.png"
+                /></a>
+              </div>
+            </div>
+            <div class="copyright">
+              <p>Powered by <a href="#" class="underline">tmrrw inc.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="./assets/scripts/jquery-3.5.1.min.js"
+    ></script>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>

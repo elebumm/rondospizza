@@ -1,363 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' /> 
-    <link rel="stylesheet" href="./assets/style/hamburgers.css">
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="slick-1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/hamburgers.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
     <title>Rondos Pizza</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header-menu header-small" id="header">
-        <div class="special-offers">
-            <p>Monday Special: <span>Dine IN</span>: Manicotti Pasta - $14, <span>Take out</span>: Large 6 item Pizza -
-                $23
-            </p>
-            <img class="close-cross" src="./assets/images/cross.png" />
+      <div class="special-offers">
+        <p>
+          Monday Special: <span>Dine IN</span>: Manicotti Pasta - $14,
+          <span>Take out</span>: Large 6 item Pizza - $23
+        </p>
+        <img class="close-cross" src="./assets/images/cross.png" />
+      </div>
+      <div class="navigation-wrapper">
+        <div class="navigration-row container">
+          <a href="index.html">
+            <div class="logo-black"></div>
+          </a>
+          <nav class="navigation">
+            <a href="menu.html">Menu</a>
+            <a href="special.html">Item</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
-        <div class="navigation-wrapper">
-            <div class="navigration-row container">
-                <a href="index.html">
-                    <div class="logo-black"></div>
-                </a>
-                <nav class="navigation">
-                    <a href="menu.html">Menu</a>
-                    <a href="special.html">Item</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-            <div class="navigation-mobile">
-                <div class="navigation-mobile-btn">
-                    <a href="menu.html">Menu</a>
-                </div>
-                <div class="navigation-mobile-btn">
-                    <a href="special.html">Item</a>
-                </div>
-                <div class="navigation-mobile-btn">
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
+        <div class="navigation-mobile">
+          <div class="navigation-mobile-btn">
+            <a href="menu.html">Menu</a>
+          </div>
+          <div class="navigation-mobile-btn">
+            <a href="special.html">Item</a>
+          </div>
+          <div class="navigation-mobile-btn">
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
-        <div class="container">
-            <div class="header-bg menu-bg">
-                <div class="header-bg-text">
-                    <h1>Menu</h1>
-                </div>
-            </div>
+      </div>
+      <div class="container">
+        <div class="header-bg menu-bg">
+          <div class="header-bg-text">
+            <h1>Menu</h1>
+          </div>
         </div>
+      </div>
     </header>
     <section class="menu">
-        <div class="container">
-            <div class="menu-wrapper">
-                <div class="menu-select-space">
-                    <div class="menu-select">
-                        <a href="#appetizers" class="menu-select-button">Appetizers</a>
-                        <a href="#salads" class="menu-select-button">Salads</a>
-                        <a href="#pasta" class="menu-select-button">pasta</a>
-                        <a href="#pizza" class="menu-select-button">Pizza</a>
-                        <div class="menu-select-subsection">
-                            <a href="#gourmet" class="menu-select-subsection-button">Gourmet</a>
-                            <a href="#artisan" class="menu-select-subsection-button">Artisan</a>
-                            <a href="#build" class="menu-select-subsection-button">Build Your Own</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="menu-list">
-                    <div class="go-to">
-                        <span>Go To</span>
-                    </div>
-                    <div class="menu-list-category" id="appetizers">
-                        <h2>Appetizers</h2>
-                        <div class="menu-list-item">
-                            <h3>Pepperoni Rolls - $12</h3>
-                            <p>Baked small pizza dough rolls filled with pepperoni and mozzarella, served with our
-                                homemade
-                                marinara dipping sauce</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Garlic Cheese Sticks - $12</h3>
-                            <p>Freshly baked dough, cut and topped with garlic butter, mozzarella and parmesan cheese
-                                wtih a side of ranch or our homemade marinara sauce</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Jalapeno Sticks - $12</h3>
-                            <p>Jalapeno pepper, cheddar and cream cheese, wrapped between our freshly made dough, baked
-                                to perfection and cut into strips with side of ranch</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Bruschetta - $10</h3>
-                            <p>Toasted garlic bread topped with seasoned tomato, red onion, mozzarella, and feta cheese
-                            </p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Garlic Bread - $4</h3>
-                            <p>Thick slices of toasted Italian bread | with cheese <span class="bold">$6</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Chicken Wings - $14</h3>
-                            <p>11 breaded oven baked wings, choice of mild, medium, hot, honey garlic, buffalo, lemon
-                                pepper, salt and pepper or cajun toppings</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Nachos - $14</h3>
-                            <p>Tortilla chips topped with tomato, green peppers. black olives, red onion, mozzarella &
-                                cheddar, baked and served with sour cream and salsa | add chicken or seasoned ground
-                                beef <span class="bold">$4</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Chicken Quesadilla - $14</h3>
-                            <p>Strips of seasoned chicken breast topped with diced tomato, red onion, cheddar &
-                                mozzarella, baked in a tortilla | served with sour cream & salsa</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Potato Wedges $7</h3>
-                            <p>Seasoned, baked and served with side of cajun ranch | with cheese, bacon, onion & sour
-                                cream <span class="bold">$14</span></p>
-                        </div>
-                    </div>
-                    <div class="menu-list-category" id="salads">
-                        <h2>Salads</h2>
-                        <div class="menu-list-item">
-                            <h3>Tossed Salad</h3>
-                            <p>Romaine lettuce with diced tomato and choice of dressing | small <span class="bold">$6</span> | large <span class="bold">$10</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Caesar Salad</h3>
-                            <p>Romaine lettuce, bacon, croutons and fresh parmesan, tossed in our zesty caesar dressing
-                                | small <span class="bold">$8</span> | large <span class="bold">$12</span> | add chicken <span class="bold">$4</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Greek Salad</h3>
-                            <p>Romaine lettuce with black olives, tomato, red onion, feta & our classic greek dressing |
-                                small <span class="bold">$8</span> | large <span class="bold">$12</span></p>
-                        </div>
-                    </div>
-                    <div class="menu-list-category" id="pasta">
-                        <h2>Pasta</h2>
-                        <div class="menu-description">
-                            <p><span class="bold">All Pastas Include</span>: Garlic bread & side tossed salad | greek or
-                                caesar <span class="bold">$2</span>
-                            </p>
-                            <p>Our tomato sauces
-                                are made in house. You can choose our homemade Bolognese sauce or our homemade tomato
-                                sauce. </p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Spaghetti & Meatballs - $16</h3>
-                            <p>Served with meatballs and our homemade tomato sauce</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Smokey Pollo Tortellini - $18</h3>
-                            <p>Grilled strips of chicken with bacon tossed with three cheese tortellini in a creamy
-                                parmesan sauce</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Fettuccine Alfredo - $16</h3>
-                            <p>Fettuccine noodles in a creamy parmesan sauce</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Lasagna - $18</h3>
-                            <p>Layers of noodles and mozzarella smothered with our homemade bolognese sauce</p>
-                        </div>
-                    </div>
-                    <div id="pizza"></div>
-                    <div class="menu-list-category" id="gourmet">
-                        <h2>Gourmet Pizza</h2>
-                        <div class="menu-description-underline">
-                            <p>Our pizzas are individually hand made and baked on a stone surface oven. We make our own
-                                dough fresh daily - never frozen.
-                            </p>
-                        </div>
-                        <div class="menu-description">
-                            <p>10” Personal <span class="bold">$20</span> | 12” Small <span class="bold">$24</span> |
-                                14” Medium <span class="bold">$29</span> | 16” Large <span class="bold">$35</span> | 18”
-                                Extra Large <span class="bold">$39</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Pulled Pork - <span class="award-winning">AWARD-WINNING</span></h3>
-                            <p>Forty Creek whisky BBQ base, pulled pork, bacon, fresh mushrooms, roasted red pepper, red
-                                onion, hot banana pepper and mozzarella cheese</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>BBQ Chicken</h3>
-                            <p>Apple butter BBQ base, mozzarella cheese, chicken, bacon, fresh mushroom, red onion and
-                                hot banana pepper</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>The Italiano</h3>
-                            <p>Garlic butter base, mozzarella cheese, proscuitto, pepperoni, Italian sausage, fresh
-                                mushroom and roasted red pepper</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Chicken Bruschetta</h3>
-                            <p>Garlic butter base, mozzarella cheese, chicken, bruschetta mix (tomato, red onion, garlic
-                                and spices) and feta</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Chicken Spinach</h3>
-                            <p>Garlic butter base, mozzarella cheese, chicken, spinach, artichoke, fresh mushroom,
-                                sundried tomato, red onion and feta</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Gourmet Veggie</h3>
-                            <p>Made in house marinara sauce, mozzarella cheese, artichoke, spinach, sundried tomato, red
-                                onion, hot banana pepper and feta</p>
-                        </div>
-                    </div>
-                    <div class="menu-list-category" id="artisan">
-                        <h2>Artisan Pizza</h2>
-                        <div class="menu-description-underline">
-                            <p>All artisan pizzas are made on a crisp thin crust.
-                            </p>
-                        </div>
-                        <div class="menu-description">
-                            <p>10” Personal <span class="bold">$18</span> | 12” Small <span class="bold">$21</span> |
-                                14” Medium <span class="bold">$26</span> | 16” Large <span class="bold">$30</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Margherita</h3>
-                            <p>Olive oil base, light tomato sauce, sliced tomato, mozzarella and sprinkle of fresh basil
-                            </p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Spinach Prosciutto</h3>
-                            <p>Chili pepper infused olive oil base, spinach, roasted red pepper and prosciutto</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>The Kyan</h3>
-                            <p>Garlic infused olive oil base, cajun chicken, spinach, red onion, tomato, feta,
-                                mozzarella and oregano</p>
-                        </div>
-                    </div>
-                    <div class="menu-list-category" id="build">
-                        <h2>Build Your Own Pizza</h2>
-                        <div class="menu-description-underline">
-                            <p>Our pizzas are individually hand made and baked on a stone surface oven. We make our own
-                                dough fresh daily - never frozen.
-                            </p>
-                        </div>
-                        <div class="menu-description">
-                            <p>Price includes mozzarella cheese and sauce:</p>
-                            <p>Panzerotti <span class="bold">$11</span> | 10” Personal <span class="bold">$11</span> |
-                                12” Small <span class="bold">$14</span> | 14” Medium <span class="bold">$16</span> | 16”
-                                Large <span class="bold">$19</span> | 18” Extra
-                                Large <span class="bold">$22</span></p>
-                        </div>
-                        <div class="menu-list-item add-your-toppings">
-                            <h3>Add Your Toppings</h3>
-                            <p><span class="bold">Regular items</span>: Panzerotti/Personal <span
-                                    class="bold">$1</span>, Small <span class="bold">$1.50</span>, Medium, <span
-                                    class="bold">$2</span>,
-                                Large <span class="bold">$2.50</span>, Extra Large <span class="bold">$3</span>
-                            </p>
-                            <p>Pepperoni, ham, bacon, italian sausage, ground beef, fresh mushroom, green peper, green
-                                olive, black olive, red onion, tomato, pineapple, jalapeno, hot banana pepper, freshi
-                                garlic</p>
-                            <p><span class="bold">Premium items</span>: Panzerotti/Personal <span
-                                    class="bold">$2</span>, Small <span class="bold">$2.50</span>, Medium, <span
-                                    class="bold">$3</span>,
-                                Large <span class="bold">$3.50</span>, Extra Large <span class="bold">$4</span>
-                            </p>
-                            <p>Chicken, proscuitto, pulled pork, anchovy, artichoke, roasted red pepper, spinach,
-                                sundried tomato, basil, feta, cheddar, parmesan, dairy-free cheese, sauce substitutes
-                                (garlic, ranch, bbq)</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Crust Options</h3>
-                            <p>Gluten-free Cauliflower Crust 12” <span class="bold">ADD $5</span></p>
-                            <p>Garlic Crust Any Pizza <span class="bold">ADD $1</span></p>
-                            <p>Thin Crust Available on Request</p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Pizza Dip - 1.50</h3>
-                            <p>Creamy Garlic, Cheddar Chipotle, Ranch</p>
-                        </div>
-                    </div>
-                    <div class="menu-list-category menu-list-category-other">
-                        <h2>Other</h2>
-                        <div class="menu-list-item">
-                            <h3>Pepperoni Pizza Slice</h3>
-                            <p>Available until 3:00 p.m. <span class="bold">$3.54</span></p>
-                        </div>
-                        <div class="menu-list-item">
-                            <h3>Dill Pickle Pizza</h3>
-                            <p>Garlic butter base, dill pickle, mozzarella cheese and dill</p>
-                        </div>
-                        <div class="menu-description">
-                            <p>Price includes mozzarella cheese and sauce:</p>
-                            <p>10” Personal <span class="bold">$11</span> |
-                                12” Small <span class="bold">$14</span> | 14” Medium <span class="bold">$16</span> | 16”
-                                Large <span class="bold">$19</span> | 18” Extra
-                                Large <span class="bold">$22</span></p>
-                        </div>
-                    </div>
-                </div>
-                    <a href="#header" class="back-to-top">Back to Top</a>
+      <div class="container">
+        <div class="menu-wrapper">
+          <div class="menu-select-space">
+            <div class="menu-select">
+              <a href="#appetizers" class="menu-select-button">Appetizers</a>
+              <a href="#salads" class="menu-select-button">Salads</a>
+              <a href="#pasta" class="menu-select-button">pasta</a>
+              <a href="#pizza" class="menu-select-button">Pizza</a>
+              <div class="menu-select-subsection">
+                <a href="#gourmet" class="menu-select-subsection-button"
+                  >Gourmet</a
+                >
+                <a href="#artisan" class="menu-select-subsection-button"
+                  >Artisan</a
+                >
+                <a href="#build" class="menu-select-subsection-button"
+                  >Build Your Own</a
+                >
+              </div>
             </div>
+          </div>
+
+          <div class="menu-list">
+            <div class="go-to">
+              <span>Go To</span>
+            </div>
+            <div class="menu-list-category" id="appetizers">
+              <h2>Appetizers</h2>
+              <div class="menu-list-item">
+                <h3>Pepperoni Rolls - $12</h3>
+                <p>
+                  Baked small pizza dough rolls filled with pepperoni and
+                  mozzarella, served with our homemade marinara dipping sauce
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Garlic Cheese Sticks - $12</h3>
+                <p>
+                  Freshly baked dough, cut and topped with garlic butter,
+                  mozzarella and parmesan cheese wtih a side of ranch or our
+                  homemade marinara sauce
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Jalapeno Sticks - $12</h3>
+                <p>
+                  Jalapeno pepper, cheddar and cream cheese, wrapped between our
+                  freshly made dough, baked to perfection and cut into strips
+                  with side of ranch
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Bruschetta - $10</h3>
+                <p>
+                  Toasted garlic bread topped with seasoned tomato, red onion,
+                  mozzarella, and feta cheese
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Garlic Bread - $4</h3>
+                <p>
+                  Thick slices of toasted Italian bread | with cheese
+                  <span class="bold">$6</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Chicken Wings - $14</h3>
+                <p>
+                  11 breaded oven baked wings, choice of mild, medium, hot,
+                  honey garlic, buffalo, lemon pepper, salt and pepper or cajun
+                  toppings
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Nachos - $14</h3>
+                <p>
+                  Tortilla chips topped with tomato, green peppers. black
+                  olives, red onion, mozzarella & cheddar, baked and served with
+                  sour cream and salsa | add chicken or seasoned ground beef
+                  <span class="bold">$4</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Chicken Quesadilla - $14</h3>
+                <p>
+                  Strips of seasoned chicken breast topped with diced tomato,
+                  red onion, cheddar & mozzarella, baked in a tortilla | served
+                  with sour cream & salsa
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Potato Wedges $7</h3>
+                <p>
+                  Seasoned, baked and served with side of cajun ranch | with
+                  cheese, bacon, onion & sour cream
+                  <span class="bold">$14</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu-list-category" id="salads">
+              <h2>Salads</h2>
+              <div class="menu-list-item">
+                <h3>Tossed Salad</h3>
+                <p>
+                  Romaine lettuce with diced tomato and choice of dressing |
+                  small <span class="bold">$6</span> | large
+                  <span class="bold">$10</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Caesar Salad</h3>
+                <p>
+                  Romaine lettuce, bacon, croutons and fresh parmesan, tossed in
+                  our zesty caesar dressing | small
+                  <span class="bold">$8</span> | large
+                  <span class="bold">$12</span> | add chicken
+                  <span class="bold">$4</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Greek Salad</h3>
+                <p>
+                  Romaine lettuce with black olives, tomato, red onion, feta &
+                  our classic greek dressing | small
+                  <span class="bold">$8</span> | large
+                  <span class="bold">$12</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu-list-category" id="pasta">
+              <h2>Pasta</h2>
+              <div class="menu-description">
+                <p>
+                  <span class="bold">All Pastas Include</span>: Garlic bread &
+                  side tossed salad | greek or caesar
+                  <span class="bold">$2</span>
+                </p>
+                <p>
+                  Our tomato sauces are made in house. You can choose our
+                  homemade Bolognese sauce or our homemade tomato sauce.
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Spaghetti & Meatballs - $16</h3>
+                <p>Served with meatballs and our homemade tomato sauce</p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Smokey Pollo Tortellini - $18</h3>
+                <p>
+                  Grilled strips of chicken with bacon tossed with three cheese
+                  tortellini in a creamy parmesan sauce
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Fettuccine Alfredo - $16</h3>
+                <p>Fettuccine noodles in a creamy parmesan sauce</p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Lasagna - $18</h3>
+                <p>
+                  Layers of noodles and mozzarella smothered with our homemade
+                  bolognese sauce
+                </p>
+              </div>
+            </div>
+            <div id="pizza"></div>
+            <div class="menu-list-category" id="gourmet">
+              <h2>Gourmet Pizza</h2>
+              <div class="menu-description-underline">
+                <p>
+                  Our pizzas are individually hand made and baked on a stone
+                  surface oven. We make our own dough fresh daily - never
+                  frozen.
+                </p>
+              </div>
+              <div class="menu-description">
+                <p>
+                  10” Personal <span class="bold">$20</span> | 12” Small
+                  <span class="bold">$24</span> | 14” Medium
+                  <span class="bold">$29</span> | 16” Large
+                  <span class="bold">$35</span> | 18” Extra Large
+                  <span class="bold">$39</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>
+                  Pulled Pork - <span class="award-winning">AWARD-WINNING</span>
+                </h3>
+                <p>
+                  Forty Creek whisky BBQ base, pulled pork, bacon, fresh
+                  mushrooms, roasted red pepper, red onion, hot banana pepper
+                  and mozzarella cheese
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>BBQ Chicken</h3>
+                <p>
+                  Apple butter BBQ base, mozzarella cheese, chicken, bacon,
+                  fresh mushroom, red onion and hot banana pepper
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>The Italiano</h3>
+                <p>
+                  Garlic butter base, mozzarella cheese, proscuitto, pepperoni,
+                  Italian sausage, fresh mushroom and roasted red pepper
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Chicken Bruschetta</h3>
+                <p>
+                  Garlic butter base, mozzarella cheese, chicken, bruschetta mix
+                  (tomato, red onion, garlic and spices) and feta
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Chicken Spinach</h3>
+                <p>
+                  Garlic butter base, mozzarella cheese, chicken, spinach,
+                  artichoke, fresh mushroom, sundried tomato, red onion and feta
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Gourmet Veggie</h3>
+                <p>
+                  Made in house marinara sauce, mozzarella cheese, artichoke,
+                  spinach, sundried tomato, red onion, hot banana pepper and
+                  feta
+                </p>
+              </div>
+            </div>
+            <div class="menu-list-category" id="artisan">
+              <h2>Artisan Pizza</h2>
+              <div class="menu-description-underline">
+                <p>All artisan pizzas are made on a crisp thin crust.</p>
+              </div>
+              <div class="menu-description">
+                <p>
+                  10” Personal <span class="bold">$18</span> | 12” Small
+                  <span class="bold">$21</span> | 14” Medium
+                  <span class="bold">$26</span> | 16” Large
+                  <span class="bold">$30</span>
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Margherita</h3>
+                <p>
+                  Olive oil base, light tomato sauce, sliced tomato, mozzarella
+                  and sprinkle of fresh basil
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Spinach Prosciutto</h3>
+                <p>
+                  Chili pepper infused olive oil base, spinach, roasted red
+                  pepper and prosciutto
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>The Kyan</h3>
+                <p>
+                  Garlic infused olive oil base, cajun chicken, spinach, red
+                  onion, tomato, feta, mozzarella and oregano
+                </p>
+              </div>
+            </div>
+            <div class="menu-list-category" id="build">
+              <h2>Build Your Own Pizza</h2>
+              <div class="menu-description-underline">
+                <p>
+                  Our pizzas are individually hand made and baked on a stone
+                  surface oven. We make our own dough fresh daily - never
+                  frozen.
+                </p>
+              </div>
+              <div class="menu-description">
+                <p>Price includes mozzarella cheese and sauce:</p>
+                <p>
+                  Panzerotti <span class="bold">$11</span> | 10” Personal
+                  <span class="bold">$11</span> | 12” Small
+                  <span class="bold">$14</span> | 14” Medium
+                  <span class="bold">$16</span> | 16” Large
+                  <span class="bold">$19</span> | 18” Extra Large
+                  <span class="bold">$22</span>
+                </p>
+              </div>
+              <div class="menu-list-item add-your-toppings">
+                <h3>Add Your Toppings</h3>
+                <p>
+                  <span class="bold">Regular items</span>: Panzerotti/Personal
+                  <span class="bold">$1</span>, Small
+                  <span class="bold">$1.50</span>, Medium,
+                  <span class="bold">$2</span>, Large
+                  <span class="bold">$2.50</span>, Extra Large
+                  <span class="bold">$3</span>
+                </p>
+                <p>
+                  Pepperoni, ham, bacon, italian sausage, ground beef, fresh
+                  mushroom, green peper, green olive, black olive, red onion,
+                  tomato, pineapple, jalapeno, hot banana pepper, freshi garlic
+                </p>
+                <p>
+                  <span class="bold">Premium items</span>: Panzerotti/Personal
+                  <span class="bold">$2</span>, Small
+                  <span class="bold">$2.50</span>, Medium,
+                  <span class="bold">$3</span>, Large
+                  <span class="bold">$3.50</span>, Extra Large
+                  <span class="bold">$4</span>
+                </p>
+                <p>
+                  Chicken, proscuitto, pulled pork, anchovy, artichoke, roasted
+                  red pepper, spinach, sundried tomato, basil, feta, cheddar,
+                  parmesan, dairy-free cheese, sauce substitutes (garlic, ranch,
+                  bbq)
+                </p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Crust Options</h3>
+                <p>
+                  Gluten-free Cauliflower Crust 12”
+                  <span class="bold">ADD $5</span>
+                </p>
+                <p>Garlic Crust Any Pizza <span class="bold">ADD $1</span></p>
+                <p>Thin Crust Available on Request</p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Pizza Dip - 1.50</h3>
+                <p>Creamy Garlic, Cheddar Chipotle, Ranch</p>
+              </div>
+            </div>
+            <div class="menu-list-category menu-list-category-other">
+              <h2>Other</h2>
+              <div class="menu-list-item">
+                <h3>Pepperoni Pizza Slice</h3>
+                <p>Available until 3:00 p.m. <span class="bold">$3.54</span></p>
+              </div>
+              <div class="menu-list-item">
+                <h3>Dill Pickle Pizza</h3>
+                <p>
+                  Garlic butter base, dill pickle, mozzarella cheese and dill
+                </p>
+              </div>
+              <div class="menu-description">
+                <p>Price includes mozzarella cheese and sauce:</p>
+                <p>
+                  10” Personal <span class="bold">$11</span> | 12” Small
+                  <span class="bold">$14</span> | 14” Medium
+                  <span class="bold">$16</span> | 16” Large
+                  <span class="bold">$19</span> | 18” Extra Large
+                  <span class="bold">$22</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#header" class="back-to-top">Back to Top</a>
         </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="container">
-            <div class="footer-row">
-                <div class="footer-hours">
-                    <h2>Hours of Operation</h2>
-                    <ul>
-                        <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
-                        <li>Wednesday to Saturday: 11 a.m. - 10 p.m.</li>
-                    </ul>
-                </div>
-                <div class="footer-call-us-mobile">
-                    <h3>Call Us</h3>
-                    <ul>
-                        <li>519.869.4288</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-map">
-                    <div id="map"></div>
-                </div>
-            </div>
-            <div class="footer-row">
-                <div class="footer-call-us">
-                    <h3>Call Us</h3>
-                    <ul>
-                        <li>519.869.4288</li>
-                    </ul>
-                </div>
-                <div class="footer-find-us">
-                    <div class="footer-find-us-box">
-                    <div class="footer-find-us-wrapper">
-                        <h3>Find Us</h3>
-                        <ul>
-                            <li>2684 Lakeshore Rd, Brights Grove, Ontario</li>
-                        </ul>
-                    </div>
-                    <div class="footer-icons">
-                        <a class="insta" href="#"><img src="./assets/images/Instagram.png" /></a>
-                        <a class="insta" href="#"><img src="./assets/images/Facebook.png" /></a>
-                    </div>
-                </div>
-                    <div class="copyright">
-                        <p>Powered by <a href="#" class="underline">tmrrw inc.</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="../rondos-pizza/assets/scripts/jquery-3.5.1.min.js"></script>
-    <script src="./assets/scripts/script.js"></script>
-</body>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-hours">
+            <h2>Hours of Operation</h2>
+            <ul>
+              <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
+              <li>Wednesday to Saturday: 11 a.m. - 10 p.m.</li>
+            </ul>
+          </div>
+          <div class="footer-call-us-mobile">
+            <h3>Call Us</h3>
+            <ul>
+              <li>519.869.4288</li>
+            </ul>
+          </div>
 
+          <div class="footer-map">
+            <div id="map"></div>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-call-us">
+            <h3>Call Us</h3>
+            <ul>
+              <li>519.869.4288</li>
+            </ul>
+          </div>
+          <div class="footer-find-us">
+            <div class="footer-find-us-box">
+              <div class="footer-find-us-wrapper">
+                <h3>Find Us</h3>
+                <ul>
+                  <li>2684 Lakeshore Rd, Brights Grove, Ontario</li>
+                </ul>
+              </div>
+              <div class="footer-icons">
+                <a class="insta" href="#"
+                  ><img src="./assets/images/Instagram.png"
+                /></a>
+                <a class="insta" href="#"
+                  ><img src="./assets/images/Facebook.png"
+                /></a>
+              </div>
+            </div>
+            <div class="copyright">
+              <p>Powered by <a href="#" class="underline">tmrrw inc.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="./assets/scripts/jquery-3.5.1.min.js"
+    ></script>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>
