@@ -25,7 +25,24 @@ $(".hamburger").on("click", function (e) {
   $(".navigation-wrapper").toggleClass("navigation-wrapper-mobile");
   $(".logo-black").toggleClass("logo");
   $(".navigation-mobile").toggleClass("display-flex");
-  $(".special-offers").toggleClass("display-none");
+  if ($(".special-offers").hasClass("user-closed")){
+
+  }else {
+    $(".special-offers").toggleClass("display-none");
+  }
+});
+
+// Go To
+
+$(".go-to-main-btn").click(function(){
+  $(".go-to-dropdown").toggle();
+  $(".go-to-main-btn").toggleClass("go-to-main-btn-toggle");
+});
+
+// ticker cross 
+
+$(".close-cross").click(function(){
+  $(".special-offers").toggleClass("display-none user-closed");
 });
 
 // Submit
@@ -42,6 +59,54 @@ $('#submit').click(function () {
     }
   });
 });
+
+// Ticker data
+
+var days = ["Monday Special:", "Tuesday Special:", "Wednesday Special:", "Thursday Special:", "Friday Special:", "Friday Special:", "Saturday Special:" , "Sunday Special:"];
+var dineInText = ["Dine In"];
+var dineInSpecial = [": Manicotti Salad - 15$,",": Spaghetti and Meatballs - 14$,",": Large pizza - $25,",": Fettucini and salad - $14,",": Large 4 item pizza - $23,",": Large gourmet pizza - $30",": Large 3 item pizza - $23 | Wings - $12,"];
+var takeOut = ["Take Out"];
+var takeOutSpecial = [": Large 6 item pizza - $23",": Large 6 item pizza - $23", ": Large 6 item pizza - $23 ", ": Large 3 item pizza - $21 ", ": 1 item pizza to any special - $16 " , ": Large Gourmet Pizza - 30$"];
+var fadeOut = 2000;
+var fadeIn = 5000;
+
+function dayFunction() {
+
+  var daySelector = $(".day").data("a") || 0;
+  $(".day").data("a", daySelector == days.length - 1 ? 0 : daySelector + 1).text(days[daySelector]).fadeIn()
+    .delay(fadeIn).fadeOut(fadeOut, dayFunction);
+
+}
+$(dayFunction);
+
+function rotateTerm() {
+  var dineInSelector = $(".dine-in").data("b") || 0;
+  $(".dine-in").data("b", dineInSelector == dineInText.length - 1 ? 0 : dineInSelector + 1).text(dineInText[dineInSelector]).fadeIn()
+    .delay(fadeIn).fadeOut(fadeOut, rotateTerm);
+
+    var takeOutSelector = $(".take-out").data("c") || 0;
+    $(".take-out").data("c", takeOutSelector == takeOut.length - 1 ? 0 : takeOutSelector + 1).text(takeOut[takeOutSelector]).fadeIn()
+      .delay(fadeIn).fadeOut(fadeOut, rotateTerm);
+}
+$(rotateTerm);
+
+function dineInFunction() {
+
+    var dineInItemSelector = $(".dine-in-item").data("d") || 0;
+    $(".dine-in-item").data("d", dineInItemSelector == dineInSpecial.length - 1 ? 0 : dineInItemSelector + 1).text(dineInSpecial[dineInItemSelector]).fadeIn()
+      .delay(fadeIn).fadeOut(fadeOut, dineInFunction);
+
+}
+$(dineInFunction);
+
+function takeOutFunction() {
+
+  var takeOutItemSelector = $(".take-out-item").data("e") || 0;
+  $(".take-out-item").data("e", takeOutItemSelector == takeOutSpecial.length - 1 ? 0 : takeOutItemSelector + 1).text(takeOutSpecial[takeOutItemSelector]).fadeIn()
+    .delay(fadeIn).fadeOut(fadeOut, takeOutFunction);
+
+}
+$(takeOutFunction);
 
 
 // menu-anchor

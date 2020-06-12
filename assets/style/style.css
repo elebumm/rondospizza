@@ -37,18 +37,21 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
   }
 
   .special-offers {
-      background-color: #103300;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
-  .special-offers img {
-      display: none;
-      width: 10px;
-      height: 10px;
-
-  }
+    position: relative;
+    background-color: #103300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.special-offers img {
+    cursor: pointer;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 20px;
+    bottom: 23px;
+}  
   .special-offers p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -62,7 +65,7 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
     color: #F4EDE9;
     padding: 18px 0;
 }
-.special-offers span {
+.special-offers .dine-in, .special-offers .take-out {
     text-decoration: underline;
     font-weight: 500;
 }
@@ -678,15 +681,11 @@ opacity: 0.8;
    .go-to {
     display: none;
     background-color: #F4EDE9;
-    background-image: url(../images/arrow-right.png);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 50%;
-    padding: 18px 145px 18px 34px;
     margin-bottom: 32px;
     
    }
-   .go-to span{
+   .go-to span, .go-to a {
+    text-decoration: none;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -695,6 +694,25 @@ opacity: 0.8;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #103300;
+   }
+   .go-to-main-btn {
+    background-image: url(../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    padding: 18px 145px 18px 34px;
+   }
+   .go-to-main-btn-toggle {
+    background-image: url(../images/arrow-down.png);
+   }
+   .go-to-dropdown {
+       display: none;
+    background: #FBF8F6;
+   }
+   .go-to-dropdown-btn {
+    padding: 18px 145px 18px 34px;
+    display: block;
+
    }
    .validation-error-message {
        display: none;
@@ -803,6 +821,15 @@ opacity: 0.8;
     }
 }
 
+@media (max-width:995px) {
+    .special-offers img {
+        position: static;
+    }
+    .special-offers {
+        padding-bottom: 15px;
+    }
+}
+
    @media (max-width:834px) {
        .contact .active {
            display: flex;
@@ -868,7 +895,7 @@ opacity: 0.8;
            margin-right: 65px;
        }
        .special-offers {
-           padding  : 0 20px;
+           padding: 15px 20px;
        }
        .header {
            background-image: url(../images/bg-main-long.png);
