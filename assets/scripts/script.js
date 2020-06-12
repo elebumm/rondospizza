@@ -62,11 +62,11 @@ $('#submit').click(function () {
 
 // Ticker data
 
-var days = ["Monday Special:", "Tuesday Special:", "Wednesday Special:", "Thursday Special:", "Friday Special:", "Friday Special:", "Saturday Special:" , "Sunday Special:"];
+var days = ["Monday Special:", "Tuesday Special:", "Wednesday Special:", "Thursday Special:", "Friday Special:", "Saturday Special:" , "Sunday Special:"];
 var dineInText = ["Dine In"];
 var dineInSpecial = [": Manicotti Salad - 15$,",": Spaghetti and Meatballs - 14$,",": Large pizza - $25,",": Fettucini and salad - $14,",": Large 4 item pizza - $23,",": Large gourmet pizza - $30",": Large 3 item pizza - $23 | Wings - $12,"];
 var takeOut = ["Take Out"];
-var takeOutSpecial = [": Large 6 item pizza - $23",": Large 6 item pizza - $23", ": Large 6 item pizza - $23 ", ": Large 3 item pizza - $21 ", ": 1 item pizza to any special - $16 " , ": Large Gourmet Pizza - 30$"];
+var takeOutSpecial = [": Large 6 item pizza - $23",": Large 6 item pizza - $23", ": Large 6 item pizza - $23 ", ": Large 3 item pizza - $21 ", ": 1 item pizza to any special - $16 " , ": Large Gourmet Pizza - 30$", ": Large 3 item pizza - $21 "];
 var fadeOut = 2000;
 var fadeIn = 5000;
 
