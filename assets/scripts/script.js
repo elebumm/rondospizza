@@ -177,7 +177,7 @@ const LiquidButton = class LiquidButton {
     this.svg = svg;
     this.layers = [{
       points: [],
-      viscosity: 0.05,
+      viscosity: 0.5,
       mouseForce: 1000,
       forceLimit: 20,
     }];
