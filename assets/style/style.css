@@ -100,7 +100,8 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
     line-height: 110%;
     text-align: center;
     color: #F4EDE9;
-    min-width: 800px;
+    /* min-width: 600px; */
+    max-width: 750px;
     margin: 0 auto;
 }
 .navigation-wrapper {
@@ -539,7 +540,17 @@ opacity: 0.8;
       background-image: url(../images/bg-special.png);
       background-attachment: unset;
   }
-
+  .disclaimer {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+    /* or 21px */
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 44px;
+  }
   /* */
 
    /* Contact */
@@ -1019,6 +1030,9 @@ opacity: 0.8;
    }
 
    @media (max-width: 600px) {
+    .disclaimer {
+        font-size: 12px;
+    }
     .btn a {
         font-size: 13px;
     }

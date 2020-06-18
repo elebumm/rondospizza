@@ -156,13 +156,13 @@ var marker = new mapboxgl.Marker()
 // button liquid
 
 const LiquidButton = class LiquidButton {
-  constructor(svg) {
+  constructor(svg,w) {
     const options = svg.dataset;
     this.id = this.constructor.id || (this.constructor.id = 1);
     this.constructor.id++;
     this.xmlns = 'http://www.w3.org/2000/svg';
     this.tension = options.tension * 1 || 0.4;
-    this.width = options.width * 1 || 110;
+    this.width =  w;
     this.height = options.height * 1 || 110;
     this.margin = options.margin || 26;
     this.hoverFactor = options.hoverFactor || -0.1;
@@ -421,9 +421,17 @@ const LiquidButton = class LiquidButton {
 const redraw = () => {
   button.initOrigins();
 };
+const buttonsU = document.getElementsByClassName('liquid-u');
+
+for (let buttonIndex = 0; buttonIndex < buttonsU.length; buttonIndex++) {
+  const button = buttonsU[buttonIndex];
+  button.liquidButton = new LiquidButton(button,180);
+}
 
 const buttons = document.getElementsByClassName('liquid-button');
+
 for (let buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
   const button = buttons[buttonIndex];
-  button.liquidButton = new LiquidButton(button);
+  button.liquidButton = new LiquidButton(button,120);
+
 }
