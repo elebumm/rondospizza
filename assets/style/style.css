@@ -19,7 +19,7 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
     font-family: Gelasio;
     font-style: normal;
     font-weight: 600;
-    font-size: 42px;
+    font-size: 38px;
     line-height: 110%;
     color: #944B20;
   }
@@ -87,7 +87,7 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    bottom:336px;
+    bottom:250px;
     left: 0;
     right: 0;
     text-align: center;
@@ -164,17 +164,18 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
 .card-box {
     box-sizing: border-box;
     background: #F4EDE9;
-    padding: 50px 100px 25px 50px;
+    padding: 50px 60px 25px 50px;
 }
 .card-right-box {
     position: absolute;
     max-width: 589px;
-    height: 439px;
+    height: 470px;
     right: 0;
     top: 10%;
 }
 .card-box h2 {
 margin-bottom: 40px;
+text-transform: uppercase;
 }
 
 .card-right-button {
@@ -280,7 +281,7 @@ margin-bottom: 40px;
     padding: 54px 75px 23px 75px;
     position: absolute;
     max-width: 589px;
-    height: 439px;
+    height: 470px;
     left: 0;
     top: 10%;
   }
@@ -918,7 +919,7 @@ opacity: 0.8;
            max-width: 502px;
        }
        h2 {
-           font-size: 30px;
+           font-size: 25px;
        }
        h3 {
            font-size: 18px;
@@ -927,7 +928,7 @@ opacity: 0.8;
            font-size: 13px;
        }
        .header-text {
-           bottom: 450px;
+           bottom: 445px;
        }
        .header-bg-text {
            left: 50px;
@@ -1085,7 +1086,7 @@ opacity: 0.8;
            margin-bottom: 37px;
        }
        .header-text {
-        bottom: 250px;
+        bottom: 230px;
     }
        .header-bg-text {
         bottom: 100px;
@@ -1121,6 +1122,9 @@ opacity: 0.8;
 
     .card-right, .left-card {
         margin-bottom: 340px;
+    }
+    .left-card {
+        margin-top: 450px;
     }
     .card-right-img img, .card-left-img img {
         max-width: unset;
