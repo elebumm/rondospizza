@@ -172,6 +172,8 @@ body, h1,h2,h3,h4,h5,h6, p, ul, ol {
     height: 470px;
     right: 0;
     top: 10%;
+    padding: 54px 60px 23px 50px;
+
 }
 .card-box h2 {
 margin-bottom: 40px;
@@ -278,7 +280,7 @@ text-transform: uppercase;
     cursor: pointer;
   }
   .card-left-box {
-    padding: 54px 75px 23px 75px;
+    padding: 54px 60px 23px 50px;
     position: absolute;
     max-width: 589px;
     height: 470px;

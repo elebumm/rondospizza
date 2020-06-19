@@ -66,7 +66,7 @@ var days = ["Monday Special:", "Tuesday Special:", "Wednesday Special:", "Thursd
 var dineInText = ["Dine In"];
 var dineInSpecial = [": Manicotti Salad - 15$,",": Spaghetti and Meatballs - 14$,",": Large pizza - $25,",": Fettucini and salad - $14,",": Large 4 item pizza - $23,",": Large gourmet pizza - $30",": Large 3 item pizza - $23 | Wings - $12,"];
 var takeOut = ["Take Out"];
-var takeOutSpecial = [": Large 6 item pizza - $23",": Large 6 item pizza - $23", ": Large 6 item pizza - $23 ", ": Large 3 item pizza - $21 ", ": 1 item pizza to any special - $16 " , ": Large Gourmet Pizza - 30$", ": Large 3 item pizza - $21 "];
+var takeOutSpecial = [": Large 6 item pizza - $23",": Large 6 item pizza - $23", ": Large 6 item pizza - $23 ", ": Large 3 item pizza - $21 ", ": Large 3 item pizza - $21" , ": Large Gourmet Pizza - 30$", ": Large 3 item pizza - $21 "];
 var fadeOut = 2000;
 var fadeIn = 5000;
 
@@ -86,34 +86,34 @@ function dayFunction() {
 }
 $(dayFunction);
 
-function rotateTerm() {
-  var dineInSelector = $(".dine-in").data("b") || 0;
-  $(".dine-in").data("b", dineInSelector == dineInText.length - 1 ? 0 : dineInSelector + 1).text(dineInText[dineInSelector]).fadeIn()
-    .delay(fadeIn).fadeOut(fadeOut, rotateTerm);
+// function rotateTerm() {
+//   var dineInSelector = $(".dine-in").data("b") || 0;
+//   $(".dine-in").data("b", dineInSelector == dineInText.length - 1 ? 0 : dineInSelector + 1).text(dineInText[dineInSelector]).fadeIn()
+//     .delay(fadeIn).fadeOut(fadeOut, rotateTerm);
 
-    var takeOutSelector = $(".take-out").data("c") || 0;
-    $(".take-out").data("c", takeOutSelector == takeOut.length - 1 ? 0 : takeOutSelector + 1).text(takeOut[takeOutSelector]).fadeIn()
-      .delay(fadeIn).fadeOut(fadeOut, rotateTerm);
-}
-$(rotateTerm);
+//     var takeOutSelector = $(".take-out").data("c") || 0;
+//     $(".take-out").data("c", takeOutSelector == takeOut.length - 1 ? 0 : takeOutSelector + 1).text(takeOut[takeOutSelector]).fadeIn()
+//       .delay(fadeIn).fadeOut(fadeOut, rotateTerm);
+// }
+// $(rotateTerm);
 
-function dineInFunction() {
+// function dineInFunction() {
 
-    var dineInItemSelector = $(".dine-in-item").data("d") || 0;
-    $(".dine-in-item").data("d", dineInItemSelector == dineInSpecial.length - 1 ? 0 : dineInItemSelector + 1).text(dineInSpecial[dineInItemSelector]).fadeIn()
-      .delay(fadeIn).fadeOut(fadeOut, dineInFunction);
+//     var dineInItemSelector = $(".dine-in-item").data("d") || 0;
+//     $(".dine-in-item").data("d", dineInItemSelector == dineInSpecial.length - 1 ? 0 : dineInItemSelector + 1).text(dineInSpecial[dineInItemSelector]).fadeIn()
+//       .delay(fadeIn).fadeOut(fadeOut, dineInFunction);
 
-}
-$(dineInFunction);
+// }
+// $(dineInFunction);
 
-function takeOutFunction() {
+// function takeOutFunction() {
 
-  var takeOutItemSelector = $(".take-out-item").data("e") || 0;
-  $(".take-out-item").data("e", takeOutItemSelector == takeOutSpecial.length - 1 ? 0 : takeOutItemSelector + 1).text(takeOutSpecial[takeOutItemSelector]).fadeIn()
-    .delay(fadeIn).fadeOut(fadeOut, takeOutFunction);
+//   var takeOutItemSelector = $(".take-out-item").data("e") || 0;
+//   $(".take-out-item").data("e", takeOutItemSelector == takeOutSpecial.length - 1 ? 0 : takeOutItemSelector + 1).text(takeOutSpecial[takeOutItemSelector]).fadeIn()
+//     .delay(fadeIn).fadeOut(fadeOut, takeOutFunction);
 
-}
-$(takeOutFunction);
+// }
+// $(takeOutFunction);
 
 
 // menu-anchor
