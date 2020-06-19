@@ -72,9 +72,16 @@ var fadeIn = 5000;
 
 function dayFunction() {
 
-  var daySelector = $(".day").data("a") || 0;
-  $(".day").data("a", daySelector == days.length - 1 ? 0 : daySelector + 1).text(days[daySelector]).fadeIn()
-    .delay(fadeIn).fadeOut(fadeOut, dayFunction);
+  // var daySelector = $(".day").data("a") || 0;
+  // $(".day").data("a", daySelector == days.length - 1 ? 0 : daySelector + 1).text(days[daySelector]).fadeIn()
+  //   .delay(fadeIn).fadeOut(fadeOut, dayFunction);
+  let day = new Date();
+  day = day.getDay();
+
+  document.getElementsByClassName('day')[0].innerHTML=days[day-1];
+  document.getElementsByClassName('dine-in-item')[0].innerHTML=dineInSpecial[day-1];
+  document.getElementsByClassName('take-out-item')[0].innerHTML=takeOutSpecial[day-1];
+
 
 }
 $(dayFunction);
