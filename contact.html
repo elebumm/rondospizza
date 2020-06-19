@@ -21,13 +21,15 @@
   <body>
     <header class="header-menu header-small contact-header">
       <div class="special-offers">
-        <p> <span class="day">Monday Special:</span> <span class="dine-in">Dine IN</span><span
-                class="dine-in-item">: Manicotti Pasta - $14,</span> <span class="take-out">Take out</span><span class="take-out-item">: Large 6
-            item Pizza -
-            $23</span>
+        <p>
+          <span class="day">Monday Special:</span>
+          <span class="dine-in">Dine IN</span
+          ><span class="dine-in-item">: Manicotti Pasta - $14,</span>
+          <span class="take-out">Take out</span
+          ><span class="take-out-item">: Large 6 item Pizza - $23</span>
         </p>
         <img class="close-cross" src="./assets/images/cross.png" />
-    </div>
+      </div>
       <div class="navigation-wrapper">
         <div class="navigration-row container">
           <a href="index.html">
@@ -81,15 +83,24 @@
           </div>
 
           <div class="contact-main">
-            <h2>Want to get in touch or have some feedback for our team? We’d love to hear from you!</h2>
+            <h2>
+              Want to get in touch or have some feedback for our team? We’d love
+              to hear from you!
+            </h2>
             <p>
-              Have any questions, feedback, thoughts or concerns? Fill out the form below and we will get back to as soon as we can. For urgent matters please call our phone at (519) 869-4288. 
+              Have any questions, feedback, thoughts or concerns? Fill out the
+              form below and we will get back to as soon as we can. For urgent
+              matters please call our phone at (519) 869-4288.
             </p>
             <h3 class="form-received">
               Form Received. We’ll get back to you as soon as we can!
             </h3>
             <div class="contact-form">
-              <form id="contact-form">
+              <form
+                id="contact-form"
+                method="POST"
+                action="https://formspree.io/xaypbjaw"
+              >
                 <div class="contact-form-row">
                   <div class="contact-form-input-label">
                     <label class="required">Name</label>
@@ -110,15 +121,15 @@
                   </div>
                   <div class="contact-form-input-label">
                     <label class="required">Email</label>
-                    <input class="validation" name="email" />
+                    <input class="validation" name="_replyto" />
                   </div>
                 </div>
                 <div class="contact-form-select">
                   <label class="required">Reason for contact</label>
-                  <select>
-                    <option>Private Event</option>
-                    <option>Test</option>
-                    <option>Test</option>
+                  <select name="type">
+                    <option>Feedback</option>
+                    <option>Question</option>
+                    <option>Reservation</option>
                   </select>
                 </div>
                 <div class="contact-form-text-area">
@@ -156,7 +167,7 @@
           <div class="footer-hours">
             <h2>Hours of Operation</h2>
             <ul>
-                       <!-- <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
+              <!-- <li>Sunday to Tuesday: 3 p.m. - 9:30 p.m.</li>
               <li>Wednesday to Saturday: 11 a.m. - 10 p.m.</li> -->
               <!-- <li>Monday to Sunday: 3 p.m. - 8 p.m.</li> -->
               <li>Sunday to Tuesday: 3 p.m. - 8:00 p.m.</li>
