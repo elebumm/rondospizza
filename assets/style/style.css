@@ -884,6 +884,14 @@ select {
   .btn-mobile {
     display: block;
   }
+  .card-left-img {
+    display: block;
+    float: right;
+  }
+  .card-left-img img {
+    display: block;
+    float: right;
+  }
   .btn-desktop {
     display: none;
   }
