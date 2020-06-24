@@ -411,13 +411,19 @@ const LiquidButton = class LiquidButton {
       const layer = this.layers[layerIndex];
       if (layerIndex === 0) {
         layer.path.style.fill = "transparent";
+        if (layer.path.attributeStyleMap) {
+          layer.path.attributeStyleMap.set("stroke", "#F37931");
+          layer.path.attributeStyleMap.set("stroke-width", "1");
+          layer.path.attributeStyleMap.set(
+            "transform",
+            "skew(-10deg,-10deg) translate(10px,30px)"
+          );
+        } else {
+          layer.path.setAttribute("stroke", "#F37931");
+          layer.path.setAttribute("stroke-width", "0");
+        }
 
-        layer.path.setAttribute("stroke", "#F37931");
-        layer.path.setAttribute("stroke-width", "1");
-        layer.path.setAttribute(
-          "transform",
-          "translate(10,30) skewX(10) skewY(-10)"
-        );
+        // layer.path.setAttribute("transform", "translate(10,30) skew(-10,-10)");
       }
       const points = layer.points;
       const commands = [];

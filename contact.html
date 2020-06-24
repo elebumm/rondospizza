@@ -108,20 +108,21 @@
                       class="validation"
                       name="first-name"
                       placeholder="First"
+                      required
                     />
                   </div>
                   <div class="contact-form-input-label">
-                    <input placeholder="Last" name="last-name" />
+                    <input placeholder="Last" name="last-name" required />
                   </div>
                 </div>
                 <div class="contact-form-row">
                   <div class="contact-form-input-label">
                     <label class="required">Phone Number</label>
-                    <input class="validation" name="phone-number" />
+                    <input class="validation" name="phone-number" required />
                   </div>
                   <div class="contact-form-input-label">
                     <label class="required">Email</label>
-                    <input class="validation" name="_replyto" />
+                    <input class="validation" name="_replyto" required />
                   </div>
                 </div>
                 <div class="contact-form-select">
@@ -134,7 +135,11 @@
                 </div>
                 <div class="contact-form-text-area">
                   <label class="required">Comments</label>
-                  <textarea class="validation" name="comments"></textarea>
+                  <textarea
+                    class="validation"
+                    name="comments"
+                    required
+                  ></textarea>
                 </div>
                 <div class="form-submit">
                   <p class="validation-error-message required-before">
