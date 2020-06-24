@@ -416,7 +416,7 @@ const LiquidButton = class LiquidButton {
         layer.path.setAttribute("stroke-width", "1");
         layer.path.setAttribute(
           "transform",
-          "skew(-10deg,-10deg) translate(10px,30px)"
+          "translate(10,30) skewX(10) skewY(-10)"
         );
       }
       const points = layer.points;

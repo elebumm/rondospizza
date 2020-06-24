@@ -874,6 +874,11 @@ select {
 }
 
 @media (max-width: 834px) {
+  .header {
+    background-position: top;
+    background-size: cover;
+  }
+
   .contact .active {
     display: flex;
     align-items: center;
@@ -949,7 +954,7 @@ select {
     padding: 15px 20px;
   }
   .header {
-    background-image: url(../images/bg-main-long.png);
+    background-image: url("../images/background-main.png");
     height: 1143px;
     margin-bottom: 100px;
   }
@@ -1074,6 +1079,10 @@ select {
 }
 
 @media (max-width: 600px) {
+  .header {
+    background-size: cover;
+    background-position: top;
+  }
   .disclaimer {
     font-size: 12px;
   }
@@ -1213,6 +1222,12 @@ select {
   }
 }
 @media (max-width: 450px) {
+  .header {
+    background-position: top;
+    margin-bottom: 100px;
+    background-size: cover;
+  }
+
   #map {
     height: 157px;
   }
