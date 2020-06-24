@@ -295,7 +295,7 @@ const LiquidButton = class LiquidButton {
           this.touches.push({ x, y, force: touch.force || 1 });
         }
       }
-      e.preventDefault();
+      // e.preventDefault();
     };
   }
 
@@ -411,9 +411,10 @@ const LiquidButton = class LiquidButton {
       const layer = this.layers[layerIndex];
       if (layerIndex === 0) {
         layer.path.style.fill = "transparent";
-        layer.path.attributeStyleMap.set("stroke", "#F37931");
-        layer.path.attributeStyleMap.set("stroke-width", "1");
-        layer.path.attributeStyleMap.set(
+
+        layer.path.setAttribute("stroke", "#F37931");
+        layer.path.setAttribute("stroke-width", "1");
+        layer.path.setAttribute(
           "transform",
           "skew(-10deg,-10deg) translate(10px,30px)"
         );
