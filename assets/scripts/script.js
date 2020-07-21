@@ -68,23 +68,23 @@ $(".close-cross").click(function () {
 // Ticker data
 
 var days = [
-  "Monday Special:",
-  "Tuesday Special:",
-  "Wednesday Special:",
-  "Thursday Special:",
-  "Friday Special:",
-  "Saturday Special:",
-  "Sunday Special:",
+  "Monday Specials:",
+  "Tuesday Specials:",
+  "Wednesday Specials:",
+  "Thursday Specials:",
+  "Friday Specials:",
+  "Saturday Specials:",
+  "Sunday Specials:",
 ];
 var dineInText = ["Dine In"];
 var dineInSpecial = [
-  ": Manicotti Salad - 15$,",
-  ": Spaghetti and Meatballs - 14$,",
-  ": Large pizza - $25,",
-  ": Fettucini and salad - $14,",
-  ": Large 4 item pizza - $23,",
-  ": Large gourmet pizza - $30",
-  ": Large 3 item pizza - $23 | Wings - $12,",
+  " Large 6 Item Pizza - 23$ | Any Pasta including Garlic Break and Small Salad - $12",
+  " Large 6 Item Pizza - 23$ | Any Pasta including Garlic Break and Small Salad - $12,",
+  " Large thin crust artisan pizza - $25 | Any Pasta including Garlic Break and Small Salad - $12",
+  " Large 3 Item Pizza - $21 | Any Pasta including Garlic Break and Small Salad - $12",
+  " Large 4 Item Pizza - $23 | Any Pasta including Garlic Break and Small Salad - $12",
+  " Large gourmet pizza - $30 | Any Pasta including Garlic Break and Small Salad - $12",
+  " Large 3 Item Pizza - $23 | Wings $12 | Any Pasta including Garlic Break and Small Salad - $12",
 ];
 var takeOut = ["Take Out"];
 var takeOutSpecial = [
@@ -99,20 +99,20 @@ var takeOutSpecial = [
 var fadeOut = 2000;
 var fadeIn = 5000;
 
-// function dayFunction() {
-//   // var daySelector = $(".day").data("a") || 0;
-//   // $(".day").data("a", daySelector == days.length - 1 ? 0 : daySelector + 1).text(days[daySelector]).fadeIn()
-//   //   .delay(fadeIn).fadeOut(fadeOut, dayFunction);
-//   let day = new Date();
-//   day = day.getDay();
+function dayFunction() {
+  // var daySelector = $(".day").data("a") || 0;
+  // $(".day").data("a", daySelector == days.length - 1 ? 0 : daySelector + 1).text(days[daySelector]).fadeIn()
+  //   .delay(fadeIn).fadeOut(fadeOut, dayFunction);
+  let day = new Date();
+  day = day.getDay();
 
-//   document.getElementsByClassName("day")[0].innerHTML = days[day - 1];
-//   document.getElementsByClassName("dine-in-item")[0].innerHTML =
-//     dineInSpecial[day - 1];
-//   document.getElementsByClassName("take-out-item")[0].innerHTML =
-//     takeOutSpecial[day - 1];
-// }
-// $(dayFunction);
+  document.getElementsByClassName("day")[0].innerHTML = days[day - 1];
+  document.getElementsByClassName("dine-in-item")[0].innerHTML =
+    dineInSpecial[day - 1];
+  document.getElementsByClassName("take-out-item")[0].innerHTML =
+    takeOutSpecial[day - 1];
+}
+$(dayFunction);
 
 // function rotateTerm() {
 //   var dineInSelector = $(".dine-in").data("b") || 0;
